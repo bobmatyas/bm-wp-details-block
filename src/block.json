@@ -8,7 +8,11 @@
 	"icon": "arrow-right",
 	"description": "Details block for showing and hiding content.",
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true
+		}
 	},
 	"textdomain": "wp-details-block",
 	"editorScript": "file:./index.js",

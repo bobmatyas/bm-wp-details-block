@@ -4,7 +4,8 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+
+import { InnerBlocks, RichText, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -15,11 +16,14 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save( { attributes } ) {
 	return (
-		<details { ...useBlockProps.save() }>
-			<summary>
-			{ 'Wp Details Block – hello from the saved content!' }</summary>
+		<details>
+			<RichText.Content 
+					{ ...useBlockProps.save() } 
+					tagName="summary" 
+					value={ attributes.content } 
+				/>
 			<InnerBlocks.Content />
 		</details>
 	);

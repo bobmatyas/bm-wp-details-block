@@ -12,6 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { 	InnerBlocks,
+			RichText,
 			useBlockProps 
 } from '@wordpress/block-editor';
 
@@ -31,20 +32,34 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit( { attributes, setAttributes } ) {
+	
+	const ALLOWED_BLOCKS = [
+		'core/code',
+		'core/column',
+		'core/columns',
+		'core/group',
+		'core/image',
+		'core/list',
+		'core/paragraph'
+	];
+
 	return (
 		<details>
-		<summary { ...useBlockProps() }>
-			{ __(
-				'Wp Details Block – hello from the editor!',
-				'wp-details-block'
-			) }
-		</summary>
-		<InnerBlocks orientation="vertical"
-					renderAppender={ () => (
-						<InnerBlocks.ButtonBlockAppender />
-					) }
-		/>
+			<RichText
+					{ ...useBlockProps() }
+					tagName="summary"
+					value={ attributes.content } 
+					allowedFormats={ [ 'core/bold', 'core/italic' ] } 
+					onChange={ ( content ) => setAttributes( { content } ) } 
+					placeholder={ __( 'Insert heading. This will be used to display and collapse content.' ) } 
+				/>
+			<InnerBlocks 
+				allowedBlocks={ ALLOWED_BLOCKS }
+				renderAppender={ () => (
+					<InnerBlocks.ButtonBlockAppender />
+				) }
+			/>
 		</details>
 	);
 }
