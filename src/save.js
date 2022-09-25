@@ -8,22 +8,20 @@
 import { InnerBlocks, RichText, useBlockProps } from '@wordpress/block-editor';
 
 /**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
+ * Save function for block
  *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
- *
- * @return {WPElement} Element to render.
+ * @param	{Object}	attributes
+ * @param	{Object} 	attributes.attributes
+ * @return 	{WPElement} Element to render.
  */
 export default function save( { attributes } ) {
 	return (
-		<details>
-			<RichText.Content 
-					{ ...useBlockProps.save() } 
-					tagName="summary" 
-					value={ attributes.content } 
-				/>
+		<details className="wp-block-bm-wp-details-container">
+			<RichText.Content
+				{ ...useBlockProps.save() }
+				tagName="summary"
+				value={ attributes.heading }
+			/>
 			<InnerBlocks.Content />
 		</details>
 	);

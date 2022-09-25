@@ -46,12 +46,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
+ * Edit function for block
  *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
+ * @param 	{Object} 	attributes
+ * @param	{Object} 	attributes.attributes
+ * @param 	{Function} 	attributes.setAttributes
+ * @return 	{WPElement}	Element to render.
  */
 
 function Edit(_ref) {
@@ -60,12 +60,14 @@ function Edit(_ref) {
     setAttributes
   } = _ref;
   const ALLOWED_BLOCKS = ['core/code', 'core/column', 'core/columns', 'core/group', 'core/image', 'core/list', 'core/paragraph'];
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("details", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("details", {
+    className: "wp-block-bm-wp-details-container"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), {
     tagName: "summary",
-    value: attributes.content,
+    value: attributes.heading,
     allowedFormats: ['core/bold', 'core/italic'],
-    onChange: content => setAttributes({
-      content
+    onChange: newText => setAttributes({
+      heading: newText
     }),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Insert heading. This will be used to display and collapse content.')
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
@@ -157,22 +159,22 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
+ * Save function for block
  *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
- *
- * @return {WPElement} Element to render.
+ * @param	{Object}	attributes
+ * @param	{Object} 	attributes.attributes
+ * @return 	{WPElement} Element to render.
  */
 
 function save(_ref) {
   let {
     attributes
   } = _ref;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("details", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save(), {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("details", {
+    className: "wp-block-bm-wp-details-container"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save(), {
     tagName: "summary",
-    value: attributes.content
+    value: attributes.heading
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null));
 }
 
@@ -277,7 +279,7 @@ function _extends() {
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"bm/wp-details-block","version":"0.1.0","title":"Details ","category":"widgets","icon":"arrow-right","description":"Details block for showing and hiding content.","supports":{"html":false,"color":{"background":true,"text":true}},"textdomain":"wp-details-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"bm/wp-details-block","version":"0.1.0","title":"Details ","category":"widgets","icon":"arrow-right","description":"Details block for showing and hiding content.","supports":{"html":false,"color":{"background":true,"text":true},"spacing":{"padding":true},"typography":{"fontSize":true,"lineHeight":true}},"attributes":{"heading":{"type":"string","source":"html","default":"Insert Heading","selector":".wp-block-bm-wp-details-block"}},"textdomain":"wp-details-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

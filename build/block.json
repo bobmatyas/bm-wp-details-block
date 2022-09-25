@@ -12,6 +12,21 @@
     "color": {
       "background": true,
       "text": true
+    },
+    "spacing": {
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "source": "html",
+      "default": "Insert Heading",
+      "selector": ".wp-block-bm-wp-details-block"
     }
   },
   "textdomain": "wp-details-block",

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Wp Details Block
+ * Plugin Name:       WP Details Block
  * Description:       Example block scaffolded with Create Block tool.
  * Requires at least: 5.9
  * Requires PHP:      7.0
@@ -8,7 +8,7 @@
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       wp-details-block
+ * Text Domain:       wp-details
  *
  * @package           create-block
  */
@@ -20,7 +20,7 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function bm_wp_details_block_block_init() {
+function bm_wp_details_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'bm_wp_details_block_block_init' );
+add_action( 'init', 'bm_wp_details_init' );

@@ -11,10 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { 	InnerBlocks,
-			RichText,
-			useBlockProps 
-} from '@wordpress/block-editor';
+import { InnerBlocks, RichText, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -25,15 +22,14 @@ import { 	InnerBlocks,
 import './editor.scss';
 
 /**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
+ * Edit function for block
  *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
+ * @param 	{Object} 	attributes
+ * @param	{Object} 	attributes.attributes
+ * @param 	{Function} 	attributes.setAttributes
+ * @return 	{WPElement}	Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	
 	const ALLOWED_BLOCKS = [
 		'core/code',
 		'core/column',
@@ -41,24 +37,26 @@ export default function Edit( { attributes, setAttributes } ) {
 		'core/group',
 		'core/image',
 		'core/list',
-		'core/paragraph'
+		'core/paragraph',
 	];
 
 	return (
-		<details>
+		<details className="wp-block-bm-wp-details-container">
 			<RichText
-					{ ...useBlockProps() }
-					tagName="summary"
-					value={ attributes.content } 
-					allowedFormats={ [ 'core/bold', 'core/italic' ] } 
-					onChange={ ( content ) => setAttributes( { content } ) } 
-					placeholder={ __( 'Insert heading. This will be used to display and collapse content.' ) } 
-				/>
-			<InnerBlocks 
-				allowedBlocks={ ALLOWED_BLOCKS }
-				renderAppender={ () => (
-					<InnerBlocks.ButtonBlockAppender />
+				{ ...useBlockProps() }
+				tagName="summary"
+				value={ attributes.heading }
+				allowedFormats={ [ 'core/bold', 'core/italic' ] }
+				onChange={ ( newText ) =>
+					setAttributes( { heading: newText } )
+				}
+				placeholder={ __(
+					'Insert heading. This will be used to display and collapse content.'
 				) }
+			/>
+			<InnerBlocks
+				allowedBlocks={ ALLOWED_BLOCKS }
+				renderAppender={ () => <InnerBlocks.ButtonBlockAppender /> }
 			/>
 		</details>
 	);
