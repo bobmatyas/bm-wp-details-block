@@ -59,7 +59,7 @@ function Edit(_ref) {
     attributes,
     setAttributes
   } = _ref;
-  const ALLOWED_BLOCKS = ['core/code', 'core/column', 'core/columns', 'core/group', 'core/image', 'core/list', 'core/paragraph'];
+  const ALLOWED_BLOCKS = ['core/audio', 'core/archives', 'core/button', 'core/buttons', 'core/calendar', 'core/categories', 'core/code', 'core/column', 'core/columns', 'core/embed', 'core/file', 'core/gallery', 'core/group', 'core/heading', 'core/image', 'core/latest-comments', 'core/latest-posts', 'core/list', 'core/media-text', 'core/page-list', 'core/paragraph', 'core/preformatted', 'core/pullquote', 'core/quote', 'core/rss', 'core/search', 'core/separator', 'core/spacer', 'core/social-link', 'core/social-links', 'core/table', 'core/table-of-contents', 'core/tag-cloud', 'core/verse', 'core/video'];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("details", {
     className: "wp-block-bm-wp-details-container"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), {
