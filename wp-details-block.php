@@ -1,11 +1,12 @@
 <?php
 /**
- * Plugin Name:       WP Details Block
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       Details: Show and Hide
+ * Description:       Details block for showing and hiding content.
  * Requires at least: 5.9
- * Requires PHP:      7.0
- * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Requires PHP:      5.6
+ * Version:           1.0
+ * Author:            Bob Matyas
+ * Author URI:		  https://www.bobmatyas.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       wp-details
