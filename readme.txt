@@ -3,7 +3,7 @@ Contributors:      lastsplash
 Author:            Bob Matyas
 Author URI:		   https://www.bobmatyas.com
 Tags:              block
-Requires at Least: 5.0
+Requires at Least: 5.9
 Tested up to:      6.0.2
 Stable tag:        1.0
 Requires PHP:      5.6
