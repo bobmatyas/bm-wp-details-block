@@ -20,8 +20,8 @@ It allows you to style the `summary` element (heading) via the editor and lets y
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/wp-details-block` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Start adding content.
+1. Activate the plugin through the 'Plugins' screen in WordPress
+1. Start adding content.
 
 == Frequently Asked Questions ==
 

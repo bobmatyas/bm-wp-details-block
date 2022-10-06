@@ -26,7 +26,6 @@
 		"heading": {
 			"type": "string",
 			"source": "html",
-			"default": "Insert Heading",
 			"selector": ".wp-block-bm-wp-details-block"
 		}
 	},
