@@ -10,7 +10,7 @@ Requires PHP:      5.6
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Details block for showing and hiding content.
+A block for showing and hiding content.
 
 == Description ==
 

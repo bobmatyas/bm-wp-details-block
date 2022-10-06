@@ -6,7 +6,7 @@
   "title": "Details: Show and Hide",
   "category": "widgets",
   "icon": "arrow-right",
-  "description": "Details block for showing and hiding content.",
+  "description": "A block for showing and hiding content.",
   "keywords": [
     "details",
     "show",
