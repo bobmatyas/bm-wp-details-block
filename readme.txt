@@ -1,9 +1,10 @@
 === Details: Show and Hide ===
-Contributors:      @lastsplash
+Contributors:      lastsplash
 Author:            Bob Matyas
 Author URI:		   https://www.bobmatyas.com
 Tags:              block
-Tested up to:      6.0
+Requires at Least: 5.0
+Tested up to:      6.0.2
 Stable tag:        1.0
 Requires PHP:      5.6
 License:           GPL-2.0-or-later
@@ -13,9 +14,11 @@ Details block for showing and hiding content.
 
 == Description ==
 
-This block adds the HTML `details` element to the site editor so that you can easily show and hide content using built-in browser functionality. It doesn't load any external JavaScript and relies on native HTML functionality.
+The block allows you to easily show and hide content using built-in browser functionality. It doesn't load any external JavaScript and relies on native HTML functionality. You can configure the appearance using built-in editor controls.
 
-It allows you to style the `summary` element (heading) via the editor and lets you insert additional blocks into the collapsed section.
+It uses the HTML `details` element to show and hide content.
+
+
 
 == Installation ==
 
