@@ -4,7 +4,7 @@
   "name": "bm/wp-details-block",
   "version": "1.0",
   "title": "Details: Show and Hide",
-  "category": "widgets",
+  "category": "design",
   "icon": "arrow-right",
   "description": "A block for showing and hiding content.",
   "keywords": [
