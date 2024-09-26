@@ -4,7 +4,7 @@
  * Description:       Details block for showing and hiding content.
  * Requires at least: 5.9
  * Requires PHP:      5.6
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Bob Matyas
  * Author URI:		  https://www.bobmatyas.com
  * License:           GPL-2.0-or-later

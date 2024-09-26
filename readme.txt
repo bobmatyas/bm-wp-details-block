@@ -47,7 +47,7 @@ Details is supported in most major browsers (Chrome, Firefox, and Safari). Caniu
 
 == Changelog ==
 
-= 1.0.1 = 
+= 1.0.2 = 
 * Deploy from Github
 
 = 1.0 =
