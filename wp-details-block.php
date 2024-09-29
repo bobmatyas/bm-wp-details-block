@@ -5,9 +5,9 @@
  * Requires at least: 5.9
  * Tested up to:      6.2
  * Requires PHP:      5.6
- * Version:           1.0.4
+ * Version:           1.0.5
  * Author:            Bob Matyas
- * Author URI:		  https://www.bobmatyas.com
+ * Author URI:        https://www.bobmatyas.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       wp-details

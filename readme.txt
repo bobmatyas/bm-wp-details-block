@@ -4,8 +4,8 @@ Author:            Bob Matyas
 Author URI:		   https://www.bobmatyas.com
 Tags:              block
 Requires at Least: 5.9
-Tested up to:      6.3
-Stable tag:        1.0.4
+Tested up to:      6.2
+Stable tag:        1.0.5
 Requires PHP:      5.6
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -48,6 +48,9 @@ Details is supported in most major browsers (Chrome, Firefox, and Safari). Caniu
 3. Editor view of adding the block and inner content.
 
 == Changelog ==
+
+= 1.0.5 =
+* Add deprecation notice to readme
 
 = 1.0.4 =
 * Add deprecation notice
